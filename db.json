@@ -1,0 +1,114 @@
+{"foods": [
+    {
+    "id": 1,
+    "name": "Dolsot Bibimbap",
+    "image": "http://www.thenewpotato.com/wp-content/uploads/2016/02/Bann-Restaurant--620x360.jpg",
+    "price": 12,
+    "description": "A rice bowl with seasoned vegetables, beef, and a fried egg, topped with gochujang (red chili paste).",
+    "review":[
+        {"id":1, "content": "The bibimbap is to die for!"},
+        {"id":2, "content": "Don't forget to mix it well!"},
+        {"id":3, "content": "I love the burnt rice at the bottom"}
+    ],
+    "rating":4.5,
+    "category":"korean"
+  },
+  {
+    "id": 2,
+    "name": "Korean Fried Chicken",
+    "image": "https://cdn.vox-cdn.com/uploads/chorus_asset/file/10097933/IMG_2366.JPG",
+    "price": 20,
+    "description": "Fried chicken made the Korean way - twice fried for an extra crisp.",
+    "review":[
+        {"id":1, "content": "The wings are so crispy."},
+        {"id":2, "content": "My mouth waters just thinking about those wings."},
+        {"id":3, "content": "This is my go-to food when I need a pick me up."}
+    ],
+    "rating":5,
+    "category":"korean"
+  },
+  {
+    "id": 3,
+    "name": "Bulgogi",
+    "image": "https://www.jocooks.com/wp-content/uploads/2021/06/korean-beef-bulgogi-1-8-768x960.jpg ",
+    "price": 18,
+    "description": "Classic marinated beef either grilled or stir-fried.",
+    "review":[
+        {"id":1, "content": "The beef is so tender and juicy."},
+        {"id":2, "content": "Whoever made the marinade for the beef is a god."},
+        {"id":3, "content": "If I'm ever at a korean bbq place, I definitely get this dish."}
+    ],
+    "rating":4,
+    "category":"korean"
+  },
+  {
+    "id": 4,
+    "name": "Kimchi Stew",
+    "image": "https://www.cookerru.com/wp-content/uploads/2021/05/kimchi-stew-2-1-scaled.jpg",
+    "price": 14,
+    "description": "A stew made with kimchi, scallions, onions, diced tofu, and seafood or pork.",
+    "review":[
+        {"id":1, "content": "Perfect for cold weather!"},
+        {"id":2, "content": "Delicious and great value!"},
+        {"id":3, "content": "The seafood kimchi stew is definitely the better one."}
+    ],
+    "rating":4,
+    "category":"korean"
+  },
+    {
+        "id": 5,
+        "name": "Pad Thai",
+        "image": "https://www.recipetineats.com/wp-content/uploads/2018/05/Chicken-Pad-Thai_9.jpg",
+        "price": 16,
+        "description": "A stir fried rice noodle dish typically made with a choice of protein, peanuts, a scrambled egg, and bean sprouts.",
+        "review":[
+            {"id":1, "content": "The pad thai is the best I've ever had."},
+            {"id":2, "content": "Don't forget to squeeze the lemon and get the juices all over the noodles!"},
+            {"id":3, "content": "A classic and delicious dish."}
+        ],
+        "rating":5,
+        "category":"thai"
+      },
+      {
+        "id": 6,
+        "name": "Pad See Ew",
+        "image": "https://inquiringchef.com/wp-content/uploads/2020/02/Pad-See-Ew_1-1097x1536.jpg",
+        "price": 16,
+        "description": "Stir fried flat noodles served with chinese broccoli, eggs, garlic, and a choice of protein.",
+        "review":[
+            {"id":1, "content": "The pad see ew is out of this world!"},
+            {"id":2, "content": "I thank God every day for letting me onto this Earth to eat good food."},
+            {"id":3, "content": "Definitely a must try if you haven't already tasted it before."}
+        ],
+        "rating":5,
+        "category":"thai"
+      },
+      {
+        "id": 7,
+        "name": "Drunken Noodles",
+        "image": "https://cupfulofkale.com/wp-content/uploads/2019/03/Vegan-Drunken-Noodles-Pad-See-Ew.jpeg",
+        "price": 18,
+        "description": "A spicy stir fried flat noodle dish that includes shallots, scallions, ginger, garlic, and a choice of protein.",
+        "review":[
+            {"id":1, "content": "Do not get this if you can't handle spice."},
+            {"id":2, "content": "My favorite Thai dish!"},
+            {"id":3, "content": "I'm love drunk from these drunken noodles!"}
+        ],
+        "rating":4,
+"category":"thai"
+      },
+      {
+        "id": 8,
+        "name": "Pineapple Fried Rice",
+        "image": "https://thewoksoflife.com/wp-content/uploads/2019/06/pineapple-fried-rice-19.jpg",
+        "price": 15,
+        "description": "A simple fried rice made using pineapples, egg, ham, peppers, garlic, and scallions, served in a pineapple. ",
+        "review":[
+            {"id":1, "content": "Look how cool the dish is, served within a pineapple and everything."},
+            {"id":2, "content": "This combination of sweet and savory is to die for!"},
+            {"id":3, "content": "I love this dish!"}
+        ],
+        "rating":4,
+        "category":"thai"
+    }]}
+    
