@@ -1,7 +1,11 @@
-import logo from '../logo.svg';
 import '../App.css';
 import { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import NavBar from './NavBar';
+import HomePage from './HomePage';
 import FoodContainer from './FoodContainer';
+import NewFoodForm from './NewFoodForm';
+import Cart from './Cart';
 
 
 
@@ -16,7 +20,21 @@ function App() {
 
   return (
     <div className="App">
-      <FoodContainer foods={foods}/>
+      <NavBar />
+      <Switch>
+        <Route exact path="/foods/new">
+          <NewFoodForm />
+        </Route>
+        <Route exact path="/foods">
+          <FoodContainer foods={foods}/>
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
+        <Route exact path="/">
+          <HomePage />
+        </Route>        
+      </Switch>
     </div>
   );
 }
