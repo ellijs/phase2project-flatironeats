@@ -11,24 +11,12 @@ import Cart from './Cart';
 
 function App() {
   const [foods, setFoods] = useState([])
-  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetch('http://localhost:4000/foods')
     .then(response => response.json())
     .then(foodData => setFoods(foodData))
   }, [])
-
-  const searchedFoods = () => {
-      if(!search) {
-          return foods
-      } else { 
-          const filteredFoods = [...foods] 
-          return filteredFoods.filter(food => {
-              return (food.name.toLowerCase().includes(search.toLowerCase()))
-          }) 
-      }
-  }
   
   return (
     <div className="App">
@@ -38,7 +26,7 @@ function App() {
           <NewFoodForm />
         </Route>
         <Route exact path="/foods">
-          <FoodContainer foods={searchedFoods()} setSearch={setSearch}/>
+          <FoodContainer foods={foods}/>
         </Route>
         <Route exact path="/cart">
           <Cart />

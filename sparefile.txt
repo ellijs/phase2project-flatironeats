@@ -249,3 +249,13 @@ food card outside map
     //         </>
     //     )
     // })
+      // const searchedFoods = () => {
+  //     if(!search) {
+  //         return foods
+  //     } else { 
+  //         const filteredFoods = [...foods] 
+  //         return filteredFoods.filter(food => {
+  //             return (food.name.toLowerCase().includes(search.toLowerCase()))
+  //         }) 
+  //     }
+  // }
