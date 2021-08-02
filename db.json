@@ -207,11 +207,11 @@
           "content": "Basic italian traditional pizza. never let you down."
         },
         {
-          "id": "2",
+          "id": 2,
           "content": "Liked the taste. I think I was in Napoli, haha!"
         }
       ],
-      "rating": "4",
+      "rating": 4,
       "category": "italian"
     },
     {

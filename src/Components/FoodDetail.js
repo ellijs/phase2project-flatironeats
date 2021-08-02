@@ -7,7 +7,7 @@ function FoodDetail({ food }){
     return(
         <div>
             <h2>{food.name}</h2>
-            <img src={food.image} alt="image of food"/>
+            {/* <img src={food.image} alt={food.name}/> */}
             <h4>{food.description}</h4>
             {foodReviewToDisplay}
             <h4>Rating: {food.rating}</h4>
