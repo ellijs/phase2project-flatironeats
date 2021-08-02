@@ -259,3 +259,10 @@ food card outside map
   //         }) 
   //     }
   // }
+    // .sort((a, b) => {
+    //     if (sortPrice === true) {
+    //         if (a.price > b.price) {
+    //             return 1
+    //         }
+    //     }
+    // })

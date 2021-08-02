@@ -1,7 +1,9 @@
-function SearchBar({ search, setSearch, setSortCategory, setSortPrice, sortPrice, handleSortPrice }) {
+function SearchBar({ search, setSearch, setSortCategory, setSortPrice, sortPrice }) {
     function handleSetCategory(e){
         setSortCategory(e.target.value)
     }
+
+    const priceClick = () => setSortPrice(!sortPrice)
 
     return (
         <div className="searchbar">
@@ -16,7 +18,7 @@ function SearchBar({ search, setSearch, setSortCategory, setSortPrice, sortPrice
                 <option value="Thai">Thai</option>
                 <option value="Vietnamese">Vietnamese</option>
             </select>
-            <input type="checkbox" value="price" onClick={(e) => setSortPrice(!sortPrice)}/>
+            <input type="checkbox" checked={sortPrice} onChange={priceClick}/>
         </div>
     )
 }
