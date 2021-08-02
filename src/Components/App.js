@@ -28,10 +28,8 @@ function App() {
       } else { 
           const filteredFoods = [...foods] 
           return filteredFoods.filter(food => {
-              (food.name.toLowerCase().includes(search.toLowerCase()))
-              
-          } 
-          ) 
+              return (food.name.toLowerCase().includes(search.toLowerCase()))     
+          }) 
       }
       // if (search.length > 0){
       //     const filteredFoods = [...foods].filter(food => {
