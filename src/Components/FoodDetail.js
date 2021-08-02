@@ -10,7 +10,7 @@ function FoodDetail({ food }){
             <img src={food.image} alt="image of food"/>
             <h4>{food.description}</h4>
             {foodReviewToDisplay}
-            <h4>{food.rating}</h4>
+            <h4>Rating: {food.rating}</h4>
         </div>
     )
 }

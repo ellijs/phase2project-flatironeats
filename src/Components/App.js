@@ -18,6 +18,33 @@ function App() {
     .then(foodData => setFoods(foodData))
   }, [])
 
+  const [search, setSearch] = useState("")
+
+    
+  const searchedFoods = () => {
+      // const filteredFoods = [...foods]
+      if(!search) {
+          return foods
+      } else { 
+          const filteredFoods = [...foods] 
+          return filteredFoods.filter(food => {
+              (food.name.toLowerCase().includes(search.toLowerCase()))
+              
+          } 
+          ) 
+      }
+      // if (search.length > 0){
+      //     const filteredFoods = [...foods].filter(food => {
+      //         return(
+      //             food.name.toLowerCase().includes(search.toLowerCase())
+      //         )
+      //     })
+      //     return filteredFoods
+      // } else {
+      //     return foods
+      // }    
+    }
+
   return (
     <div className="App">
       <NavBar />
@@ -26,13 +53,13 @@ function App() {
           <NewFoodForm />
         </Route>
         <Route exact path="/foods">
-          <FoodContainer foods={foods}/>
+          <FoodContainer foods={searchedFoods()} setSearch={setSearch}/>
         </Route>
         <Route exact path="/cart">
           <Cart />
         </Route>
         <Route exact path="/">
-          <HomePage />
+          <HomePage foods={foods}/>
         </Route>        
       </Switch>
     </div>

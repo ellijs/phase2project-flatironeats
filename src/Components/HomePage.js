@@ -1,8 +1,15 @@
-function HomePage(){
+function HomePage({ foods }){
+
     return(
-        <div>
-            I will be homepage
-        </div>
+        <>
+            <div>
+                <h1>Welcome to FlatironEats!</h1>
+                <p>Food delivery for hungry coders.</p> 
+                <a className="button" href="/foods">
+                    View All Available Foods to Order
+                </a>
+            </div>
+        </>
     )
 }
 
