@@ -1,9 +1,9 @@
-function SearchBar({ search, setSearch }){
-    
-    // function handleSearch(){}
-    
+function SearchBar({ search, setSearch }) {
     return (
-        <input type="text" placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)}/>
+        <div className="searchbar">
+            <label htmlFor="search">Search:</label>
+            <input type="text" id="search" placeholder="Search..." value={search} onChange={(e) => setSearch(e.target.value)}/>
+        </div>
     )
 }
 

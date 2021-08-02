@@ -11,6 +11,7 @@ import Cart from './Cart';
 
 function App() {
   const [foods, setFoods] = useState([])
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetch('http://localhost:4000/foods')
@@ -18,31 +19,17 @@ function App() {
     .then(foodData => setFoods(foodData))
   }, [])
 
-  const [search, setSearch] = useState("")
-
-    
   const searchedFoods = () => {
-      // const filteredFoods = [...foods]
       if(!search) {
           return foods
       } else { 
           const filteredFoods = [...foods] 
           return filteredFoods.filter(food => {
-              return (food.name.toLowerCase().includes(search.toLowerCase()))     
+              return (food.name.toLowerCase().includes(search.toLowerCase()))
           }) 
       }
-      // if (search.length > 0){
-      //     const filteredFoods = [...foods].filter(food => {
-      //         return(
-      //             food.name.toLowerCase().includes(search.toLowerCase())
-      //         )
-      //     })
-      //     return filteredFoods
-      // } else {
-      //     return foods
-      // }    
-    }
-
+  }
+  
   return (
     <div className="App">
       <NavBar />

@@ -228,5 +228,24 @@
     }
     ]
 
-
-     
+spare search from monday 
+  // if (search.length > 0){
+      //     const filteredFoods = [...foods].filter(food => {
+      //         return(
+      //             food.name.toLowerCase().includes(search.toLowerCase())
+      //         )
+      //     })
+      //     return filteredFoods
+      // } else {
+      //     return foods
+      // }    
+food card outside map
+// const foodsToDisplay = foods.map((food) => {
+    //     return (
+    //         <>
+                // <h2>{food.name}</h2>
+                // <img src={food.image} alt="image of food"/>
+                // <h4>Price: {food.price}</h4>
+    //         </>
+    //     )
+    // })
