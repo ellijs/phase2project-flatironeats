@@ -69,6 +69,7 @@ function NewFoodForm({ addNewFood }){
               </div>
               <div className="col-75">
                   <select name="category" onChange={manageFormData}>
+                    <option>Choose Food Category</option>
                     <option value="Italian">Italian</option>
                     <option value="Korean">Korean</option>
                     <option value="Thai">Thai</option>
