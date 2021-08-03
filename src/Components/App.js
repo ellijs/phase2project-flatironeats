@@ -7,11 +7,10 @@ import FoodContainer from './FoodContainer';
 import NewFoodForm from './NewFoodForm';
 import Cart from './Cart';
 
-
-
 function App() {
   const [foods, setFoods] = useState([])
   const [myCart, setMyCart] = useState([])
+  const [review, setReview] = useState('')
   const history = useHistory()
 
   useEffect(() => {
@@ -50,6 +49,20 @@ function App() {
     setMyCart([])
   }
 
+  function addNewReview(value, id){
+    console.log(value, id)
+    const newReviewArray = [...foods].map(food => {
+      if(food.id === id) {
+        food.review.push(value)
+        return food
+      } else {
+        return food
+      }
+    })
+    setFoods(newReviewArray)
+  }
+  
+
   return (
     <div className="App">
       <NavBar />
@@ -58,7 +71,7 @@ function App() {
           <NewFoodForm addNewFood={addNewFood}/>
         </Route>
         <Route exact path="/foods">
-          <FoodContainer foods={foods} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart}/>
+          <FoodContainer foods={foods} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart} setReview={addNewReview}/>
         </Route>
         <Route exact path="/cart">
           <Cart foods={foods} myCart={myCart} removeFoodFromCart={removeFoodFromCart} purchaseFood={purchaseFood}/>
