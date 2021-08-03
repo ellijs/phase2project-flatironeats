@@ -1,6 +1,6 @@
 import { useState } from "react"; 
 
-function ReviewForm({ id, setReview, setShowReview, showReview }){
+function ReviewForm({ food, setReview, setShowReview, showReview }){
 
     const [formView, setFormView] = useState('')
 
