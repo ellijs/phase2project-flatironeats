@@ -35,6 +35,33 @@ function App() {
     })  
   }
   
+  // ADD newReview Data to db.json
+    function addNewReview(value, food, length, id){
+    const newReviewObj = { id: (length + 1), content: value }
+    
+    fetch(`http://localhost:3000/foods/${id}/` , {
+      method: "PATCH",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body: JSON.stringify({
+        "review": [ ...food.review, newReviewObj ]
+      })
+    }).then(r=> r.json()).then(data=>{
+       console.log(data)
+      })
+
+    const newReviewArray = [...foods].map(food => {
+      if(food.id === id) {
+        food.review.push(newReviewObj)
+        return food
+      } else {
+        return food
+      }
+    })
+    setFoods(newReviewArray)
+  }
+  
   function addFoodToCart(food){
     alert("Added to Cart!")
     const tempCart = myCart.map(newItem => {
@@ -69,7 +96,6 @@ function App() {
     setFoods(newReviewArray)
   }
   
-
   return (
     <div className="App">
       <NavBar />
