@@ -4,10 +4,9 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
     function onRemoveFood(id){
         removeFoodFromCart(id)
     }
-    let totalPrice = myCart.reduce((a, b) => {
-        debugger
-        return (a.price + b.price), 0
-    }) 
+    let subtotalPrice = myCart.reduce((a, b) => (a + b.price),0)
+    let totalPrice = parseFloat(subtotalPrice*1.08875)
+
     
     return(
         <div>
@@ -19,15 +18,13 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
                             <button onClick={(e) => onRemoveFood(food.id)}>
                                 Remove</button>
                         </li>
-                    </div>)
-                
-            })}
+                    </div>)                              
+                })}
+                <h4>Subtotal: ${subtotalPrice}</h4>
+                <h3>Total (inc. tax): ${totalPrice}</h3>
             <button onClick={purchaseFood}>Purchase (just clears cart for now)</button>
         </div>
     )
 }
 
 export default Cart;
-// {myCart.map((food) => {
-//     return(<FoodCard key={food.id} food={food} removeFoodFromCart={removeFoodFromCart}/>)
-// })}
