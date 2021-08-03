@@ -3,12 +3,18 @@ import FoodDetail from "./FoodDetail";
 
 function FoodCard({ food, addFoodToCart, removeFoodFromCart, review, setReview }){
     const [isClicked, setIsClicked] = useState(false)
+    const [isLiked, setIsLiked] = useState(false)
+
     function onAddFood(){
         addFoodToCart(food)
     }
 
     function onImageClick(){
         setIsClicked(!isClicked)
+    }
+
+    function onHeartClick(){
+        setIsLiked(!isLiked)
     }
 
       return(
@@ -25,8 +31,9 @@ function FoodCard({ food, addFoodToCart, removeFoodFromCart, review, setReview }
                     <h4 className="text">Price: ${food.price}</h4> 
                 </div>}
                 </div>
-
+                {isLiked ? <button onClick={onHeartClick}>❤️</button> : <button onClick={onHeartClick}>♡</button>}
                 <button className="addToCart" onClick={onAddFood}>Add To Cart</button>
+
             </div>
         </div>
     )
