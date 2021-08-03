@@ -9,16 +9,18 @@ function FoodCard({ food, addFoodToCart, removeFoodFromCart }){
 
       return(
         <div className="food-card menu content box">
-            <div onClick={(e)=>setIsClicked(!isClicked)}>
-            {isClicked ? <FoodDetail food={food} /> :
-            <div className="menu content box">
-                <h2 className="text">{food.name}</h2>
-                <div className="imgBx">
-                  <img src={food.image} alt={food.name}/>
+            <div>
+                <div onClick={(e)=>setIsClicked(!isClicked)} >
+                {isClicked ? <FoodDetail food={food} /> :
+                <div className="menu content box">
+                    <h2 className="text">{food.name}</h2>
+                    <div className="imgBx">
+                      <img src={food.image} alt={food.name}/>
+                    </div>
+                    <h4 className="text">Price: ${food.price}</h4> 
+                </div>}
                 </div>
-                <h4 className="text">Price: ${food.price}</h4> 
-            </div>}
-            {<button className="addToCart" onClick={onAddFood}>Add To Cart</button>}
+                {<button className="addToCart" onClick={onAddFood}>Add To Cart</button>}
             </div>
         </div>
     )
