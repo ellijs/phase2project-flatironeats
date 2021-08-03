@@ -29,6 +29,9 @@ function App() {
     })
     setMyCart(tempCart)
   }
+  function purchaseFood(){
+    setMyCart([])
+  }
 
   return (
     <div className="App">
@@ -41,7 +44,7 @@ function App() {
           <FoodContainer foods={foods} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart}/>
         </Route>
         <Route exact path="/cart">
-          <Cart foods={foods} myCart={myCart} removeFoodFromCart={removeFoodFromCart}/>
+          <Cart foods={foods} myCart={myCart} removeFoodFromCart={removeFoodFromCart} purchaseFood={purchaseFood}/>
         </Route>
         <Route exact path="/">
           <HomePage foods={foods}/>

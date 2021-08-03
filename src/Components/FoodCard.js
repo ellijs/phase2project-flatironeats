@@ -4,12 +4,13 @@ import FoodDetail from "./FoodDetail";
 function FoodCard({ food, addFoodToCart, removeFoodFromCart }){
     const [isClicked, setIsClicked] = useState(false)
     function onAddFood(){
-        console.log(food)
         addFoodToCart(food)
     }
+
     function onRemoveFood(){
         removeFoodFromCart(food.id)
     }
+
     return(
         <div className="food-card">
             <div onClick={(e)=>setIsClicked(!isClicked)}>
