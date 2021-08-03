@@ -26,7 +26,7 @@ function FoodDetail({ food, onImageClick, setReview }){
             <div>
                 {showReview ? <ReviewForm food={food} showReview={showReview} setShowReview={setShowReview} setReview={setReview}/>
                         : 
-                    <button onClick={addReviewClick}>Add Review</button>}
+                    <button id="review-button" onClick={addReviewClick}>Add Review</button>}
             </div>
         </div>
     )

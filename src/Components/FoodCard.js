@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FoodDetail from "./FoodDetail";
 
-function FoodCard({ food, addFoodToCart, removeFoodFromCart, review, setReview }){
+function FoodCard({ food, addFoodToCart, review, setReview }){
     const [isClicked, setIsClicked] = useState(false)
     const [isLiked, setIsLiked] = useState(false)
 
@@ -31,7 +31,8 @@ function FoodCard({ food, addFoodToCart, removeFoodFromCart, review, setReview }
                     <h4 className="text">Price: ${food.price}</h4> 
                 </div>}
                 </div>
-                {isLiked ? <button onClick={onHeartClick}>❤️</button> : <button onClick={onHeartClick}>♡</button>}
+                {isLiked ? <small className="like" onClick={onHeartClick}>❤️</small> 
+                : <small className="like" onClick={onHeartClick}>♡</small>}
                 <button className="addToCart" onClick={onAddFood}>Add To Cart</button>
             </div>
         </div>
