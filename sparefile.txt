@@ -330,3 +330,9 @@ food card outside map
 // {myCart.map((food) => {
 //     return(<FoodCard key={food.id} food={food} removeFoodFromCart={removeFoodFromCart}/>)
 // })}
+  // const tempCart = myCart.map(newItem => {
+  //   let uniqueId = uuidv4()
+  //   return {...newItem, cartId: uniqueId}
+  // })
+  // setMyCart([...tempCart, food])
+  /*|| (myCart.indexOf(food) !== index) */

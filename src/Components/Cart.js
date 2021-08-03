@@ -5,7 +5,7 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
         removeFoodFromCart(cartId)
     }
     let subtotalPrice = myCart.reduce((a, b) => (a + b.price),0)
-    let totalPrice = parseFloat(subtotalPrice*1.08875)
+    let totalPrice = parseFloat(subtotalPrice*1.08875).toFixed(2)
 
     
     return(
@@ -13,7 +13,7 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
             <h2>My Cart</h2>
             {myCart.map((food) => {
                 return(
-                    <div key={food.id}>
+                    <div key={food.cartId}>
                         <li>{food.name} - ${food.price}
                             <button onClick={(e) => onRemoveFood(food.cartId)}>
                                 Remove</button>

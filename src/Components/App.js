@@ -61,39 +61,28 @@ function App() {
     })
     setFoods(newReviewArray)
   }
-  
+
   function addFoodToCart(food){
     alert("Added to Cart!")
-    const tempCart = myCart.map(newItem => {
-      return {...newItem, cartId: uuidv4()}
-    })
-    setMyCart([...tempCart, food])
+    let uniqueId = uuidv4()  // or let uniqueId = Date.now()
+    let newItem = {...food, cartId: uniqueId}
+    setMyCart([...myCart, newItem])
+    console.log(myCart)
   }
+
   function removeFoodFromCart(cartId){
     console.log(myCart)
-    let tempCart = myCart.filter((food, index) => {
-      if ((food.cartId !== cartId) || (myCart.indexOf(food) !== index))
+    let tempCart = myCart.filter((food) => {
+      if ((food.cartId !== cartId) ) {
         return true
-    })
-    setMyCart([])
+    } else {
+      return false
+    }})
     setMyCart(tempCart)
   }
   function purchaseFood(){
     alert("Thank you for purchasing food from FlatironEats!")
     setMyCart([])
-  }
-
-  function addNewReview(value, id){
-    console.log(value, id)
-    const newReviewArray = [...foods].map(food => {
-      if(food.id === id) {
-        food.review.push(value)
-        return food
-      } else {
-        return food
-      }
-    })
-    setFoods(newReviewArray)
   }
   
   return (
