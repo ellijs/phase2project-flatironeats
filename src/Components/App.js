@@ -23,7 +23,7 @@ function App() {
   // ADD newForm Data to db.json
   function addNewFood(formData) {
     console.log(formData)  
-    fetch('http://localhost:3000/foods', {
+    fetch('http://localhost:4000/foods', {
       method: "POST",
       headers: {
         "Content-Type" : "application/json"
