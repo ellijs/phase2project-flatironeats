@@ -18,9 +18,6 @@ function App() {
     .then(foodData => setFoods(foodData))
   }, [])
   
-
-  
-
   return (
     <div className="App">
       <NavBar />
@@ -29,7 +26,7 @@ function App() {
           <NewFoodForm />
         </Route>
         <Route exact path="/foods">
-          <FoodContainer foods={foods} setFoods={setFoods}/>
+          <FoodContainer foods={foods}/>
         </Route>
         <Route exact path="/cart">
           <Cart />

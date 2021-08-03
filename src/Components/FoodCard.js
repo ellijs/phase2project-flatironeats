@@ -10,7 +10,7 @@ function FoodCard({ food }){
             <>
                 <h2>{food.name}</h2>
                 <img src={food.image} alt={food.name}/>
-                <h4>Price: {food.price}</h4> 
+                <h4>Price: ${food.price}</h4> 
             </>}
             
         </div>

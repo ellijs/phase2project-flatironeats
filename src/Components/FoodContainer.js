@@ -2,13 +2,13 @@ import { useState } from "react";
 import FoodCard from "./FoodCard";
 import SearchBar from "./SearchBar";
 
-function FoodContainer({ foods, setFoods }){
+function FoodContainer({ foods }){
     const [search, setSearch] = useState("")
     const [sortCategory, setSortCategory] = useState("All")
     const [sortPrice, setSortPrice] = useState(false)
 
     // Chain all sorts/filters together needs to be wordier than wanted but works this way - include the big wrapping if statements to account for the "originalFoods" setting - infinite loop sortPrice and foodsToDisplay()
-    const filteredFoods = foods.filter(food => {
+    const filteredFoods = [...foods].filter(food => {
         if (search.length > 0) {
             return (food.name.toLowerCase().includes(search.toLowerCase()))
         } else {

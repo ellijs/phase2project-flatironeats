@@ -1,10 +1,12 @@
-function SearchBar({ search, setSearch, setSortCategory, setSortPrice, sortPrice }) {
+function SearchBar({ search, setSearch, setSortCategory, sortPrice, setSortPrice }) {
     function handleSetCategory(e){
         setSortCategory(e.target.value)
     }
+
     function handleSearch(e){
         setSearch(e.target.value)
     }
+
     function handlePriceSort(){
         setSortPrice(!sortPrice)
     }
@@ -13,7 +15,8 @@ function SearchBar({ search, setSearch, setSortCategory, setSortPrice, sortPrice
         <div className="searchbar">
             <label htmlFor="search">Search:</label>
             <input type="text" id="search" placeholder="Search..." value={search} onChange={handleSearch}/>
-            <select onChange={handleSetCategory} type="dropdown">
+            <label htmlFor="dropdown">Choose Cuisine:</label>
+            <select type="dropdown" id="dropdown"onChange={handleSetCategory}>
                 <option value="All">All</option>              
                 <option value="Dessert">Dessert</option>
                 <option value="Italian">Italian</option>
@@ -22,7 +25,8 @@ function SearchBar({ search, setSearch, setSortCategory, setSortPrice, sortPrice
                 <option value="Thai">Thai</option>
                 <option value="Vietnamese">Vietnamese</option>
             </select>
-            <input type="checkbox" checked={sortPrice} onChange={handlePriceSort}/>
+            <label htmlFor="sort">Sort By Price:</label>
+            <input type="checkbox" id="sort" checked={sortPrice} onChange={handlePriceSort}/>
         </div>
     )
 }
