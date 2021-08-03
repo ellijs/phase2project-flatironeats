@@ -4,9 +4,6 @@ import FoodDetail from "./FoodDetail";
 function FoodCard({ food }){
     const [isClicked, setIsClicked] = useState(false)
 
-
-
-
     return(
         <div className="food-card" onClick={(e)=>setIsClicked(!isClicked)}>
             {isClicked ? <FoodDetail food={food} /> :

@@ -19,15 +19,7 @@ function App() {
   }, [])
   
 
-  const priceSorted = [...foods].sort((a, b) => {
-    if (a.price - b.price) {
-        return -1
-    } else if (b.price - a.price) {
-        return 1
-    } else {
-        return 0
-    }
-})
+  
 
   return (
     <div className="App">
@@ -37,7 +29,7 @@ function App() {
           <NewFoodForm />
         </Route>
         <Route exact path="/foods">
-          <FoodContainer foods={foods} setFoods={setFoods} priceSorted={priceSorted}/>
+          <FoodContainer foods={foods} setFoods={setFoods}/>
         </Route>
         <Route exact path="/cart">
           <Cart />

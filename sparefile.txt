@@ -266,3 +266,64 @@ food card outside map
     //         }
     //     }
     // })
+
+
+    // const priceSorted = [...foods].sort((a, b) => {
+    //     if (a.price - b.price) {
+    //         return -1
+    //     } else if (b.price - a.price) {
+    //         return 1
+    //     } else {
+    //         return 0
+    //     }
+    // }).map(food => <FoodCard key={food.id} food={food} />)
+
+    // function setSortedPriceFilter(){
+    //     setFoods(priceSorted)
+    // }
+    
+    // const priceFilter = () => !sortPrice ? setFoods(priceSorted) : foodsToDisplay()
+
+    // const priceClick = () => setSortPrice(!sortPrice)
+
+    
+    // const priceSorted = [...foods].sort((a, b) => {
+    //     return (a.price - b.price)
+    // })
+    
+    // const originalFoods = foods.map((food) => <FoodCard key={food.id} food={food} />)
+    
+    // function foodsToDisplay() {
+    //     if(!search) {
+    //         return originalFoods
+    //     } else {
+    //         return filteredFoods
+    //     }
+    // }
+
+    // const sortByPrice = [...foods].sort((a, b) => a.price - b.price ? -1 : 1)
+    
+    // function handleSortPrice(){
+    //     if (sortPrice) {
+    //         return setFoods(sortByPrice)
+    //     } else {
+    //         return foodsToDisplay()
+    //     } 
+    // }
+    
+    // .sort((a, b) => {
+    //     if (a.price < b.price) {
+    //         return -1
+    //     } else {
+    //         return 1
+    //     }
+    // })
+
+    // const sortedCategories = [...foods].filter((food) => {
+    //     if (sortCategory === "All") {
+    //         return true
+    //     } else if (food.category === sortCategory) {
+    //         return true
+    //     }
+        
+    // })
