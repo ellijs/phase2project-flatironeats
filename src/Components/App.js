@@ -11,6 +11,7 @@ import Cart from './Cart';
 
 function App() {
   const [foods, setFoods] = useState([])
+  const [myCart, setMyCart] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:4000/foods')
@@ -18,6 +19,17 @@ function App() {
     .then(foodData => setFoods(foodData))
   }, [])
   
+  function addFoodToCart(food){
+    setMyCart([...myCart, food])
+  }
+  function removeFoodFromCart(id){
+    let tempCart = myCart.filter((food) => {
+      if (food.id !== id)
+        return true
+    })
+    setMyCart(tempCart)
+  }
+
   return (
     <div className="App">
       <NavBar />
@@ -26,10 +38,10 @@ function App() {
           <NewFoodForm />
         </Route>
         <Route exact path="/foods">
-          <FoodContainer foods={foods}/>
+          <FoodContainer foods={foods} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart}/>
         </Route>
         <Route exact path="/cart">
-          <Cart />
+          <Cart foods={foods} myCart={myCart} removeFoodFromCart={removeFoodFromCart}/>
         </Route>
         <Route exact path="/">
           <HomePage foods={foods}/>

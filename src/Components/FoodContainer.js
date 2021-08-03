@@ -2,7 +2,7 @@ import { useState } from "react";
 import FoodCard from "./FoodCard";
 import SearchBar from "./SearchBar";
 
-function FoodContainer({ foods }){
+function FoodContainer({ foods, addFoodToCart, removeFoodFromCart }){
     const [search, setSearch] = useState("")
     const [sortCategory, setSortCategory] = useState("All")
     const [sortPrice, setSortPrice] = useState(false)
@@ -29,7 +29,7 @@ function FoodContainer({ foods }){
             return 0
         }
     })
-    .map(food => <FoodCard key={food.id} food={food} />)
+    .map(food => <FoodCard key={food.id} food={food} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart} />)
 
 
     return (
