@@ -176,8 +176,8 @@
       "price": 8,
       "description": " 4pcs spring rolls served with lettuce and herbs.",
       "review": [
-        { "id": 1, "content": "The broth is fantastic!" },
-        { "id": 2, "content": "Need more beef inside." }
+        { "id": 1, "content": "The spring roll is a hit or miss - they're not always crispy." },
+        { "id": 2, "content": "There is not enough pork inside the spring roll." }
       ],
       "rating": 3,
       "category": "vietnamese"
