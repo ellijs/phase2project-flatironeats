@@ -99,6 +99,14 @@ img {
   color: #111;
 }
 
+#review-button{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
 .addToCart {
   background-color: #4CAF50;
   color: white;
