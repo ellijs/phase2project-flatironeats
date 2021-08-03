@@ -33,11 +33,9 @@ function FoodCard({ food, addFoodToCart, removeFoodFromCart, review, setReview }
                 </div>
                 {isLiked ? <button onClick={onHeartClick}>❤️</button> : <button onClick={onHeartClick}>♡</button>}
                 <button className="addToCart" onClick={onAddFood}>Add To Cart</button>
-
             </div>
         </div>
     )
 }
 
 export default FoodCard;
-{/* <button onClick={onRemoveFood}>Remove From Cart</button> */}

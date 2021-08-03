@@ -1,5 +1,3 @@
-import FoodCard from './FoodCard';
-
 function Cart({ myCart, removeFoodFromCart, purchaseFood }){
     function onRemoveFood(cartId){
         removeFoodFromCart(cartId)

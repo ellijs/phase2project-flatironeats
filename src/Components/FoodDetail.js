@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import ReviewForm from './ReviewForm'
 
 function FoodDetail({ food, onImageClick, setReview }){

@@ -11,7 +11,6 @@ import { v4 as uuidv4 } from 'uuid';
 function App() {
   const [foods, setFoods] = useState([])
   const [myCart, setMyCart] = useState([])
-  const [review, setReview] = useState('')
   const history = useHistory()
 
   useEffect(() => {
