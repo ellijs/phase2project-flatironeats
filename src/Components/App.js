@@ -1,6 +1,6 @@
 import '../App.css';
 import { useState, useEffect } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
 import FoodContainer from './FoodContainer';
@@ -12,12 +12,28 @@ import Cart from './Cart';
 function App() {
   const [foods, setFoods] = useState([])
   const [myCart, setMyCart] = useState([])
+  const history = useHistory()
 
   useEffect(() => {
     fetch('http://localhost:4000/foods')
     .then(response => response.json())
     .then(foodData => setFoods(foodData))
-  }, [])
+  }, []) 
+
+  // ADD newForm Data to db.json
+  function addNewFood(formData) {
+    console.log(formData)  
+    fetch('http://localhost:3000/foods', {
+      method: "POST",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify(formData) 
+    }).then(resp=>resp.json()).then(newData => {
+      setFoods([newData, ...foods])
+      history.push(`/foods`)
+    })  
+  }
   
   function addFoodToCart(food){
     setMyCart([...myCart, food])
@@ -39,7 +55,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/foods/new">
-          <NewFoodForm />
+          <NewFoodForm addNewFood={addNewFood}/>
         </Route>
         <Route exact path="/foods">
           <FoodContainer foods={foods} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart}/>
