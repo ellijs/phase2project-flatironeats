@@ -75,6 +75,7 @@ function NewFoodForm({ addNewFood }){
                     <option value="Thai">Thai</option>
                     <option value="Dessert">Dessert</option>
                     <option value="Potato">Potato</option>
+                    <option value="Vietnamese">Vietnamese</option>
                   </select>
               </div>
             </div>

@@ -36,6 +36,7 @@ function App() {
   }
   
   function addFoodToCart(food){
+    alert("Added to Cart!")
     setMyCart([...myCart, food])
   }
   function removeFoodFromCart(id){

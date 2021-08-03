@@ -9,7 +9,7 @@ function FoodDetail({ food }){
             <h2 className="text">{food.name}</h2>
             <h4 className="text">{food.description}</h4>
             <h4>Reviews: {foodReviewToDisplay} </h4>
-            <h4 className="text">Rating: {food.rating}</h4>
+            <h4 className="text">Rating: {food.rating} stars</h4>
         </div>
     )
 }
