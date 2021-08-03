@@ -82,19 +82,6 @@ function App() {
     alert("Thank you for purchasing food from FlatironEats!")
     setMyCart([])
   }
-
-  function addNewReview(value, id){
-    console.log(value, id)
-    const newReviewArray = [...foods].map(food => {
-      if(food.id === id) {
-        food.review.push(value)
-        return food
-      } else {
-        return food
-      }
-    })
-    setFoods(newReviewArray)
-  }
   
   return (
     <div className="App">
