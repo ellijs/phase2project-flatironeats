@@ -5,11 +5,11 @@ function FoodDetail({ food }){
 
 
     return(
-        <div>
-            <h2>{food.name}</h2>
-            <h4>{food.description}</h4>
-            Reviews: {foodReviewToDisplay}
-            <h4>Rating: {food.rating}</h4>
+        <div className="menu content box">
+            <h2 className="text">{food.name}</h2>
+            <h4 className="text">{food.description}</h4>
+            <h4>Reviews: {foodReviewToDisplay} </h4>
+            <h4 className="text">Rating: {food.rating}</h4>
         </div>
     )
 }
