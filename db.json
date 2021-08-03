@@ -158,7 +158,7 @@
     },
     {
       "id": 10,
-      "name": "Beef Pho",
+      "name": "Bahn Mi Sandwich",
       "image": "https://www.dinneratthezoo.com/wp-content/uploads/2019/11/bahn-mi-14.jpg",
       "price": 13,
       "description": "Vietnamese ham, house bacon, patty, mayonnaise, pickled daikon, carrot, cucumber, and cilantro.",
@@ -197,7 +197,7 @@
     },
     {
       "id": 13,
-      "name": "Grilled Pork Chop with Rice",
+      "name": "Pizza Margherita",
       "image": "https://www.ediblebrooklyn.com/wp-content/uploads/sites/2/2013/10/featured-pizza.jpg",
       "price": 15,
       "description": "Neapolitan pizza, sun dried tomatoes, mozzarella cheese, fresh basil, extra-virgin olive oil",
@@ -261,7 +261,7 @@
     },
     {
       "id": 17,
-      "name": "Ice Cream",
+      "name": "Vanilla Ice Cream",
       "image": "https://i.imgur.com/QZRGHaV.png",
       "price": 3,
       "description": "Two scoops of smooth vanilla ice cream in a cup.",
@@ -280,7 +280,7 @@
     },
     {
       "id": 18,
-      "name": "Cheesecake",
+      "name": "New York Cheesecake",
       "image": "https://i.imgur.com/HyNjavP.png",
       "price": 6,
       "description": "One slice of tangy, creamy cheesecake - so rich, once slice is all you need.",
