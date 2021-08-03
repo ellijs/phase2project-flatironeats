@@ -6,6 +6,7 @@ import HomePage from './HomePage';
 import FoodContainer from './FoodContainer';
 import NewFoodForm from './NewFoodForm';
 import Cart from './Cart';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [foods, setFoods] = useState([])
@@ -36,13 +37,18 @@ function App() {
   
   function addFoodToCart(food){
     alert("Added to Cart!")
-    setMyCart([...myCart, food])
+    const tempCart = myCart.map(newItem => {
+      return {...newItem, cartId: uuidv4()}
+    })
+    setMyCart([...tempCart, food])
   }
-  function removeFoodFromCart(id){
-    let tempCart = myCart.filter((food) => {
-      if (food.id !== id)
+  function removeFoodFromCart(cartId){
+    console.log(myCart)
+    let tempCart = myCart.filter((food, index) => {
+      if ((food.cartId !== cartId) || (myCart.indexOf(food) !== index))
         return true
     })
+    setMyCart([])
     setMyCart(tempCart)
   }
   function purchaseFood(){

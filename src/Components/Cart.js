@@ -1,8 +1,8 @@
 import FoodCard from './FoodCard';
 
 function Cart({ myCart, removeFoodFromCart, purchaseFood }){
-    function onRemoveFood(id){
-        removeFoodFromCart(id)
+    function onRemoveFood(cartId){
+        removeFoodFromCart(cartId)
     }
     let subtotalPrice = myCart.reduce((a, b) => (a + b.price),0)
     let totalPrice = parseFloat(subtotalPrice*1.08875)
@@ -15,7 +15,7 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
                 return(
                     <div key={food.id}>
                         <li>{food.name} - ${food.price}
-                            <button onClick={(e) => onRemoveFood(food.id)}>
+                            <button onClick={(e) => onRemoveFood(food.cartId)}>
                                 Remove</button>
                         </li>
                     </div>)                              

@@ -327,3 +327,6 @@ food card outside map
     //     }
         
     // })
+// {myCart.map((food) => {
+//     return(<FoodCard key={food.id} food={food} removeFoodFromCart={removeFoodFromCart}/>)
+// })}
