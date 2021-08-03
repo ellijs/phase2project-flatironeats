@@ -3,22 +3,22 @@ import { NavLink } from 'react-router-dom';
 
 function NavBar(){
     return (
-        <nav>
+        <nav className="navigation">
             <NavLink 
                 exact to="/">
-                Home Page
+                <li>Home Page</li>
             </NavLink>
             <NavLink 
                 to="/foods">
-                All Foods
+                <li>All Foods</li>
             </NavLink>
             <NavLink 
                 to="/cart">
-                My Cart
+                <li>My Cart</li>
             </NavLink>
             <NavLink 
                 to="/foods/new">
-                Add New Food
+                <li>Add New Food</li>
             </NavLink>
         </nav>
     )
