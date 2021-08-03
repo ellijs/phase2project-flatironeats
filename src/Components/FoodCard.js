@@ -7,10 +7,6 @@ function FoodCard({ food, addFoodToCart, removeFoodFromCart }){
         addFoodToCart(food)
     }
 
-    function onRemoveFood(){
-        removeFoodFromCart(food.id)
-    }
-
     return(
         <div className="food-card">
             <div onClick={(e)=>setIsClicked(!isClicked)}>
@@ -21,10 +17,10 @@ function FoodCard({ food, addFoodToCart, removeFoodFromCart }){
                 <h4>Price: ${food.price}</h4> 
             </>}
             </div>
-            {addFoodToCart ? <button onClick={onAddFood}>Add To Cart</button> 
-                : <button onClick={onRemoveFood}>Remove From Cart</button> }
+            {<button onClick={onAddFood}>Add To Cart</button>}
         </div>
     )
 }
 
 export default FoodCard;
+{/* <button onClick={onRemoveFood}>Remove From Cart</button> */}

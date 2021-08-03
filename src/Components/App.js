@@ -30,6 +30,7 @@ function App() {
     setMyCart(tempCart)
   }
   function purchaseFood(){
+    alert("Thank you for purchasing food from FlatironEats!")
     setMyCart([])
   }
 

@@ -1,15 +1,14 @@
 function FoodDetail({ food }){
     const foodReviewToDisplay = food.review.map((textReview) => {
-        return <p key={textReview.id}>{textReview.content}</p>
+        return <li key={textReview.id}>{textReview.content}</li>
     })
 
 
     return(
         <div>
             <h2>{food.name}</h2>
-            {/* <img src={food.image} alt={food.name}/> */}
             <h4>{food.description}</h4>
-            {foodReviewToDisplay}
+            Reviews: {foodReviewToDisplay}
             <h4>Rating: {food.rating}</h4>
         </div>
     )
