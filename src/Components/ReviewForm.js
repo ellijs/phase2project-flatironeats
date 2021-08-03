@@ -1,19 +1,20 @@
 import { useState } from "react"; 
 
-function ReviewForm({ id, setReview }){
+function ReviewForm({ id, setReview, setShowReview, showReview }){
 
     const [formView, setFormView] = useState('')
 
     function onAddReview(e){
         // e.stopPropagation()
-        setFormView(e.target.value, id)
+        setFormView(e.target.value)
     }
 
     function onAddReviewSubmit(e){
         // e.stopPropagation()
         e.preventDefault()
-        setReview(formView, id)
+        setReview(formView, food, food.review.length, food.id)
         setFormView('')
+        setShowReview(!showReview)
     }
 
     return(
