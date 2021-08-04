@@ -15,7 +15,7 @@ function App() {
   const history = useHistory()
 
   useEffect(() => {
-    fetch('http://localhost:3000/foods')
+    fetch('http://localhost:4000/foods')
     .then(response => response.json())
     .then(foodData => setFoods(foodData))
   }, []) 
@@ -23,7 +23,7 @@ function App() {
   // ADD newForm Data to db.json
   function addNewFood(formData) {
     console.log(formData)  
-    fetch('http://localhost:3000/foods', {
+    fetch('http://localhost:4000/foods', {
       method: "POST",
       headers: {
         "Content-Type" : "application/json"
@@ -39,7 +39,7 @@ function App() {
     function addNewReview(value, food, length, id){
     const newReviewObj = { id: (length + 1), content: value }
     
-    fetch(`http://localhost:3000/foods/${id}/` , {
+    fetch(`http://localhost:4000/foods/${id}/` , {
       method: "PATCH",
       headers: {
         "Content-Type" : "application/json"
