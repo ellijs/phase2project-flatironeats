@@ -40,7 +40,7 @@ img {
 .navigation li {
   text-decoration: none;
   list-style: none;
-  font-weight: 300;
+  font-weight: 500;
   margin-left: 50px;
   background-color: #4CAF50;
   color: white;
@@ -52,7 +52,6 @@ img {
 
 .navigation li:hover {
   color: white;
-  font-weight: 500;
   background-color: #028007;
 } 
 
