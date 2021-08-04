@@ -45,6 +45,7 @@ img {
 .navigation li:hover {
   color: white;
   font-weight: 500;
+  background-color: #028007;
 } 
 
 /* SearchBar */
