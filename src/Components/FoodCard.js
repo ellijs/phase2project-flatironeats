@@ -29,7 +29,7 @@ function FoodCard({ food, addFoodToCart, review, setReview }){
                                 <img src={food.image} alt={food.name} 
                                 onClick={onImageClick}/>
                             </div>
-                            <h4 className="text">Price: ${food.price}</h4> 
+                            <h2 className="text">Price: ${food.price}</h2> 
                         </div>}
                 </div>
                 <div className="addToCartButtonDiv">
