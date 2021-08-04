@@ -14,7 +14,8 @@ function SearchBar({ search, setSearch, setSortCategory, sortPrice, setSortPrice
     return (
         <div className="searchbar">
             <label htmlFor="search">Search:</label>
-            <input type="text" id="search" placeholder="Search..." value={search} onChange={handleSearch}/>
+            <input type="text" id="search" placeholder="Search..." 
+                value={search} onChange={handleSearch}/>
             <label htmlFor="dropdown">Choose Cuisine:</label>
             <select type="dropdown" id="dropdown"onChange={handleSetCategory}>
                 <option value="All">All</option>              

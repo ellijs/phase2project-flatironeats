@@ -1,4 +1,3 @@
-
 function Cart({ myCart, removeFoodFromCart, purchaseFood }){
     function onRemoveFood(cartId){
         removeFoodFromCart(cartId)
@@ -15,13 +14,13 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
                 <div className="products">
                     {myCart.map((food) => {
                         return(
-    
                             <div key={food.id} className="product">
                                 <img src={food.image} />
                                 <div className="product-info">
                                     <h3 className="product-name">{food.name}</h3>
                                     <h3 className="product-price">Price : $ {food.price}</h3>
-                                    <button onClick={(e) => onRemoveFood(food.cartId)} className="product-remove">
+                                    <button onClick={(e) => onRemoveFood(food.cartId)}
+                                    className="product-remove">
                                     Remove Item
                                     </button>
                                 </div>

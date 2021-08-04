@@ -21,18 +21,19 @@ function FoodCard({ food, addFoodToCart, review, setReview }){
         <div className="food-card menu content box">
             <div className="food-card-content">
                 <div>
-                {isClicked ? <FoodDetail food={food} onImageClick={onImageClick} review={review} setReview={setReview}/> :
-                <div className="content-box">
-                    <h2 className="text">{food.name}</h2>
-                    <div className="imgBx">
-                      <img src={food.image} alt={food.name}
-                      onClick={onImageClick}/>
-                    </div>
-                    <h4 className="text">Price: ${food.price}</h4> 
-                </div>}
+                    {isClicked ? <FoodDetail food={food} onImageClick={onImageClick} 
+                        review={review} setReview={setReview}/> :
+                        <div className="content-box">
+                            <h2 className="text">{food.name}</h2>
+                            <div className="imgBx">
+                                <img src={food.image} alt={food.name} 
+                                onClick={onImageClick}/>
+                            </div>
+                            <h4 className="text">Price: ${food.price}</h4> 
+                        </div>}
                 </div>
                 {isLiked ? <small className="like" onClick={onHeartClick}>❤️</small> 
-                : <small className="like" onClick={onHeartClick}>♡</small>}
+                    : <small className="like" onClick={onHeartClick}>♡</small>}
                 <button className="addToCart" onClick={onAddFood}>Add To Cart</button>
             </div>
         </div>

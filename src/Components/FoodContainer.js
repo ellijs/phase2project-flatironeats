@@ -7,7 +7,7 @@ function FoodContainer({ foods, addFoodToCart, removeFoodFromCart, setReview }){
     const [sortCategory, setSortCategory] = useState("All")
     const [sortPrice, setSortPrice] = useState(false)
 
-    // Chain all sorts/filters together needs to be wordier than wanted but works this way - include the big wrapping if statements to account for the "originalFoods" setting - infinite loop sortPrice and foodsToDisplay()
+    // Chain all sorts/filters together (search, dropdown, sort by price, map out FoodCard) - include the big wrapping if statements to account for the "originalFoods" setting - we caused an infinite loop with sortPrice and foodsToDisplay()
     const filteredFoods = [...foods].filter(food => {
         if (search.length > 0) {
             return (food.name.toLowerCase().includes(search.toLowerCase()))

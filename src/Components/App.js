@@ -61,7 +61,7 @@ function App() {
     })
     setFoods(newReviewArray)
   }
-
+  // Add food to cart
   function addFoodToCart(food){
     alert("Added to Cart!")
     let uniqueId = uuidv4()  // or let uniqueId = Date.now()
@@ -69,17 +69,19 @@ function App() {
     setMyCart([...myCart, newItem])
     console.log(myCart)
   }
-
+  // Remove food from cart
   function removeFoodFromCart(cartId){
     console.log(myCart)
     let tempCart = myCart.filter((food) => {
       if ((food.cartId !== cartId) ) {
         return true
-    } else {
-      return false
-    }})
+      } else {
+        return false
+      }
+    })
     setMyCart(tempCart)
   }
+  // "Purchase" all items in cart
   function purchaseFood(){
     alert("Thank you for purchasing food from FlatironEats!")
     setMyCart([])
@@ -93,10 +95,12 @@ function App() {
           <NewFoodForm addNewFood={addNewFood}/>
         </Route>
         <Route exact path="/foods">
-          <FoodContainer foods={foods} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart} setReview={addNewReview}/>
+          <FoodContainer foods={foods} addFoodToCart={addFoodToCart} 
+          removeFoodFromCart={removeFoodFromCart} setReview={addNewReview}/>
         </Route>
         <Route exact path="/cart">
-          <Cart foods={foods} myCart={myCart} removeFoodFromCart={removeFoodFromCart} purchaseFood={purchaseFood}/>
+          <Cart foods={foods} myCart={myCart} 
+          removeFoodFromCart={removeFoodFromCart} purchaseFood={purchaseFood}/>
         </Route>
         <Route exact path="/">
           <HomePage foods={foods}/>
