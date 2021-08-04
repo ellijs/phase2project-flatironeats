@@ -32,9 +32,11 @@ function FoodCard({ food, addFoodToCart, review, setReview }){
                             <h4 className="text">Price: ${food.price}</h4> 
                         </div>}
                 </div>
+                <div className="addToCartButtonDiv">
                 {isLiked ? <small className="like" onClick={onHeartClick}>❤️</small> 
                     : <small className="like" onClick={onHeartClick}>♡</small>}
                 <button className="addToCart" onClick={onAddFood}>Add To Cart</button>
+                </div>
             </div>
         </div>
     )
