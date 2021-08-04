@@ -15,7 +15,7 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
                     {myCart.map((food) => {
                         return(
                             <div key={food.id} className="product">
-                                <img src={food.image} />
+                                <img src={food.image} alt={food.name}/>
                                 <div className="product-info">
                                     <h3 className="product-name">{food.name}</h3>
                                     <h3 className="product-price">Price : $ {food.price}</h3>
