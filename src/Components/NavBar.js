@@ -9,19 +9,27 @@ function NavBar(){
                 <img className = "top-logo" src={logo2} alt="logo" />
             </div>
             <NavLink 
-                exact to="/">
+                exact to="/" 
+                style={{ textDecoration: 'none' }}
+                exact activeClassName="underline">
                 <li>Home Page</li>
             </NavLink>
             <NavLink 
-                to="/foods">
+                to="/foods"
+                style={{ textDecoration: 'none' }}
+                exact activeClassName="underline">
                 <li>All Foods</li>
             </NavLink>
             <NavLink 
-                to="/cart">
+                to="/cart"
+                style={{ textDecoration: 'none' }}
+                exact activeClassName="underline">
                 <li>My Cart</li>
             </NavLink>
             <NavLink 
-                to="/foods/new">
+                to="/foods/new"
+                style={{ textDecoration: 'none' }}
+                exact activeClassName="underline">
                 <li>Add New Food</li>
             </NavLink>
         </nav>

@@ -90,22 +90,24 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Switch>
-        <Route exact path="/foods/new">
-          <NewFoodForm addNewFood={addNewFood}/>
-        </Route>
-        <Route exact path="/foods">
-          <FoodContainer foods={foods} addFoodToCart={addFoodToCart} 
-          removeFoodFromCart={removeFoodFromCart} setReview={addNewReview}/>
-        </Route>
-        <Route exact path="/cart">
-          <Cart foods={foods} myCart={myCart} 
-          removeFoodFromCart={removeFoodFromCart} purchaseFood={purchaseFood}/>
-        </Route>
-        <Route exact path="/">
-          <HomePage foods={foods}/>
-        </Route>        
-      </Switch>
+      <div>
+        <Switch>
+          <Route exact path="/foods/new">
+            <NewFoodForm addNewFood={addNewFood}/>
+          </Route>
+          <Route exact path="/foods">
+            <FoodContainer foods={foods} addFoodToCart={addFoodToCart} 
+            removeFoodFromCart={removeFoodFromCart} setReview={addNewReview}/>
+          </Route>
+          <Route exact path="/cart">
+            <Cart foods={foods} myCart={myCart} 
+            removeFoodFromCart={removeFoodFromCart} purchaseFood={purchaseFood}/>
+          </Route>
+          <Route exact path="/">
+            <HomePage foods={foods}/>
+          </Route>        
+        </Switch>
+      </div>
       <Footer />
     </div>
   );

@@ -36,7 +36,7 @@ function FoodContainer({ foods, addFoodToCart, removeFoodFromCart, setReview }){
     return (
         <div className="menu content">
             <SearchBar search={search} setSearch={setSearch} setSortCategory={setSortCategory} sortPrice={sortPrice} setSortPrice={setSortPrice}/>
-            <div>{filteredFoods}</div>
+            {filteredFoods}
         </div>
     )
 }

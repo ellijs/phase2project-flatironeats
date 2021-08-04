@@ -91,7 +91,7 @@ function NewFoodForm({ addNewFood }){
             </div>
           </div>
           <div class="row">
-            <input type="submit" value="Add New Food"/>
+            <button type='submit' className="new-food-button">Add New Food</button>
           </div>
         </form>
       </div>

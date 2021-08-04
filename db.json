@@ -146,7 +146,7 @@
       "id": 9,
       "name": "Beef Pho",
       "image": "https://beyondthenoms.com/wp-content/uploads/2021/02/Vietnamese-Beef-Pho-Noodle-Soup-09.jpg",
-      "price": "15",
+      "price": 15,
       "description": "Oxtail, well-done brisket, and flank in our pho broth",
       "review": [
         { "id": 1, "content": "The broth is fantastic!" },
