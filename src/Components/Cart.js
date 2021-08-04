@@ -1,32 +1,23 @@
-function Cart({ myCart, removeFoodFromCart, purchaseFood }){
-    function onRemoveFood(cartId){
-        removeFoodFromCart(cartId)
-    }
-   
-    let subtotalPrice = myCart.reduce((a, b) => (a + b.price),0)
-    let totalPrice = parseFloat(subtotalPrice*1.08875).toFixed(2)
+import ItemsInCart from './ItemsInCart'
 
+function Cart({ myCart, setMyCart, removeFoodFromCart, purchaseFood }){
+    
+    const renderCartItems = myCart.map((food) => {
+        return(
+           <ItemsInCart key={food.cartId} removeFoodFromCart={removeFoodFromCart} food={food} myCart={myCart} setMyCart={setMyCart} />
+        )
+    })
+   
+    let totalItems = myCart.reduce((a, b) => (a + b.quantity),0)
+    let subtotalPrice = myCart.reduce((a, b) => (a + (b.price * b.quantity)),0)
+    let totalPrice = parseFloat(subtotalPrice*1.08875).toFixed(2)
     
     return(
         <div className="shopping-cart-container">
             <h1>Shopping Cart</h1>
             <div className="cart">
                 <div className="products">
-                    {myCart.map((food) => {
-                        return(
-                            <div key={food.id} className="product">
-                                <img src={food.image} alt={food.name}/>
-                                <div className="product-info">
-                                    <h3 className="product-name">{food.name}</h3>
-                                    <h3 className="product-price">Price : $ {food.price}</h3>
-                                    <button onClick={(e) => onRemoveFood(food.cartId)}
-                                    className="product-remove">
-                                    Remove Item
-                                    </button>
-                                </div>
-                            </div>
-                        )
-                    })}
+                    {renderCartItems}
                 </div>
                 
                 <div className="cart-total">
@@ -34,7 +25,7 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
                         <span>
                             Number of Items
                         </span>
-                        <span>{myCart.length}</span>
+                        <span>{totalItems}</span>
                     </p>
                     <p> 
                         <span>Subtotal</span>
@@ -53,4 +44,5 @@ function Cart({ myCart, removeFoodFromCart, purchaseFood }){
 }
 
 export default Cart;
+
 
