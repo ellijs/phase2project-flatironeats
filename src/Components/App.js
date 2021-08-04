@@ -12,10 +12,11 @@ import Footer from './Footer';
 function App() {
   const [foods, setFoods] = useState([])
   const [myCart, setMyCart] = useState([])
+  const [newCartItem, setnewCartItem] = useState([])
   const history = useHistory()
 
   useEffect(() => {
-    fetch('http://localhost:4000/foods')
+    fetch('http://localhost:3000/foods')
     .then(response => response.json())
     .then(foodData => setFoods(foodData))
   }, []) 
@@ -23,7 +24,7 @@ function App() {
   // ADD newForm Data to db.json
   function addNewFood(formData) {
     console.log(formData)  
-    fetch('http://localhost:4000/foods', {
+    fetch('http://localhost:3000/foods', {
       method: "POST",
       headers: {
         "Content-Type" : "application/json"
@@ -39,7 +40,7 @@ function App() {
     function addNewReview(value, food, length, id){
     const newReviewObj = { id: (length + 1), content: value }
     
-    fetch(`http://localhost:4000/foods/${id}/` , {
+    fetch(`http://localhost:3000/foods/${id}/` , {
       method: "PATCH",
       headers: {
         "Content-Type" : "application/json"
@@ -65,10 +66,26 @@ function App() {
   function addFoodToCart(food){
     alert("Added to Cart!")
     let uniqueId = uuidv4()  // or let uniqueId = Date.now()
-    let newItem = {...food, cartId: uniqueId}
-    setMyCart([...myCart, newItem])
-    console.log(myCart)
+    let newItem = {...food, cartId: uniqueId, quantity: 1}
+   
+    const idInCart = myCart.map(food => food = food.id)
+
+    if(!myCart.length) {
+      setMyCart([...myCart, newItem])
+    } else if (idInCart.includes(newItem.id)) {
+      setMyCart([...myCart].map((item) => {
+        if(item.id === newItem.id) {
+          item.quantity += 1;
+          return item
+        } else {
+          return item;
+        }}
+      ))
+    } else {
+      setMyCart([...myCart, newItem])
+    }
   }
+  
   // Remove food from cart
   function removeFoodFromCart(cartId){
     console.log(myCart)
@@ -100,7 +117,7 @@ function App() {
             removeFoodFromCart={removeFoodFromCart} setReview={addNewReview}/>
           </Route>
           <Route exact path="/cart">
-            <Cart foods={foods} myCart={myCart} 
+            <Cart foods={foods} myCart={myCart} setMyCart={setMyCart}
             removeFoodFromCart={removeFoodFromCart} purchaseFood={purchaseFood}/>
           </Route>
           <Route exact path="/">
