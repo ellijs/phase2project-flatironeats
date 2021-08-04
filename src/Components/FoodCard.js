@@ -33,8 +33,8 @@ function FoodCard({ food, addFoodToCart, review, setReview }){
                         </div>}
                 </div>
                 <div className="addToCartButtonDiv">
-                {isLiked ? <small className="like" onClick={onHeartClick}>❤️</small> 
-                    : <small className="like" onClick={onHeartClick}>♡</small>}
+                {isLiked ? <big className="like" onClick={onHeartClick}>❤️</big> 
+                    : <big className="like" onClick={onHeartClick}>♡</big>}
                 <button className="addToCart" onClick={onAddFood}>Add To Cart</button>
                 </div>
             </div>

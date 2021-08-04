@@ -19,6 +19,8 @@ img {
   max-width: 500px;
 }
 
+
+
 /* NavBar */
 .navigation {
   position: relative;
@@ -27,13 +29,14 @@ img {
   text-align: center;
   justify-content: center;
   padding: 25px;
+  align-items: center;
 }
 
 .navigation li {
   text-decoration: none;
   list-style: none;
   font-weight: 300;
-  margin-left: 30px;
+  margin-left: 50px;
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
@@ -140,6 +143,7 @@ img {
 
 .addToCartButtonDiv {
   padding: 35px;
+}
 
 /* form Component */
 * {
@@ -356,3 +360,55 @@ input[type=submit]:hover {
     }
 }
 
+/* HomePage */
+.logo {
+  color: turquoise;
+  font-size: 1.25em;
+  font-family: Helvetica;
+  margin-right: 0.5rem;
+}
+
+.home-page .full-logo .flatiron {
+  /* font-family: 'Trade Gothic'; */
+  margin: 0px;
+  padding: 0px;
+}
+
+.home-page .full-logo .eats {
+  font-family: 'Alacrity Sans Semibold';
+  padding: 0px;
+  margin: 0px;
+  color: green;
+}
+
+.home-page p{
+  font-family:'Fira Code', monospace;
+  margin: 20px;
+  padding: 5px; 
+}
+
+.top-logo {
+  width: 50%;
+  height: auto;
+}
+
+.side-logo{
+  justify-content: left;
+  display: flex;
+  float: left;
+  /* width: 125px;
+  height: 70px;
+  object-fit: cover; */
+}
+
+.footer-logo {
+  height: 730px;
+  position: relative;
+}
+
+.footer-logo .bottom-logo{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+} 
