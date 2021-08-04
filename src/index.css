@@ -138,6 +138,9 @@ img {
   transition: 0.3s ease-in;
 }
 
+.addToCartButtonDiv {
+  padding: 35px;
+
 /* form Component */
 * {
   box-sizing: border-box;
