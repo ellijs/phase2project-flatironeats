@@ -39,7 +39,7 @@ function App() {
     function addNewReview(value, food, length, id){
     const newReviewObj = { id: (length + 1), content: value }
     
-    fetch(`http://localhost:3000/foods/${id}/` , {
+    fetch(`http://localhost:4000/foods/${id}/` , {
       method: "PATCH",
       headers: {
         "Content-Type" : "application/json"
