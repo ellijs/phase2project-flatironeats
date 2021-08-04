@@ -12,7 +12,6 @@ import Footer from './Footer';
 function App() {
   const [foods, setFoods] = useState([])
   const [myCart, setMyCart] = useState([])
-  const [newCartItem, setnewCartItem] = useState([])
   const history = useHistory()
 
   useEffect(() => {
