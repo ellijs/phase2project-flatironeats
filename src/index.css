@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: "../src/Images/Logo_-_Flat_Transparent.png";
+  background-color: slategray;
 }
 
 code {

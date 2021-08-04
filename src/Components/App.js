@@ -7,6 +7,7 @@ import FoodContainer from './FoodContainer';
 import NewFoodForm from './NewFoodForm';
 import Cart from './Cart';
 import { v4 as uuidv4 } from 'uuid';
+import Footer from './Footer';
 
 function App() {
   const [foods, setFoods] = useState([])
@@ -101,6 +102,7 @@ function App() {
           <HomePage foods={foods}/>
         </Route>        
       </Switch>
+      <Footer />
     </div>
   );
 }
