@@ -26,6 +26,7 @@ img {
   display: flex;
   text-align: center;
   justify-content: center;
+  padding: 25px;
 }
 
 .navigation li {
@@ -45,6 +46,11 @@ img {
   color: white;
   font-weight: 500;
 } 
+
+/* SearchBar */
+.searchbar {
+  padding: 50px;
+}  
 
 /* Menu */
 
