@@ -436,3 +436,24 @@ label {
 .underline {
   border-bottom-width: 2px;
 }
+
+/* Home Page Button */
+.homePageLink {
+  background-color: #05addf;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 400;
+}
+
+.homePageLink:hover {
+  background-color: #005aa9;
+}
+
+.hpLinks {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 0 25%;
+}
