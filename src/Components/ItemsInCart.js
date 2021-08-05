@@ -34,9 +34,8 @@ function ItemsInCart ({ food, myCart, setMyCart, removeFoodFromCart }) {
         <div className="product-info">
             <h3 className="product-name">{food.name}</h3>
             <h3 className="product-price">Price : $ {food.price}</h3>           
-            <h3 className="product-quantity">Quantity : {food.quantity}</h3>
-            <button onClick={handleIncreaseQuantity}>+</button>
-            <button onClick={handleDecreaseQuantity}>-</button>
+            <h3 className="product-quantity">Quantity : <button onClick={handleDecreaseQuantity}>-</button> {food.quantity} <button onClick={handleIncreaseQuantity}>+</button></h3>
+            
             <button onClick={(e) => onRemoveFood(food.cartId)}
             className="product-remove">
             Remove Item
