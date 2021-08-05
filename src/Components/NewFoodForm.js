@@ -6,7 +6,7 @@ function NewFoodForm({ addNewFood }){
      image: "",
      price: "",
      description: "",
-     rating: "",
+     rating: 1,
      review: [],
      category: ""
    })
@@ -29,7 +29,7 @@ function NewFoodForm({ addNewFood }){
         image: "",
         price: "",
         description: "",
-        rating: "",
+        rating: 1,
         review: [],
         category: ""
       })
