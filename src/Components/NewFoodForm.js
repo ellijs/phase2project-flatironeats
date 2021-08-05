@@ -40,7 +40,7 @@ function NewFoodForm({ addNewFood }){
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-25">
-              <label for="name">Name of Food </label>
+              <label htmlFor="name">Name of Food </label>
             </div>
             <div className="col-75">
               <input onChange={manageFormData} type="text" name="name" 
@@ -49,7 +49,7 @@ function NewFoodForm({ addNewFood }){
           </div>
           <div className="row">
             <div className="col-25">
-              <label for="image">Image URL :</label>
+              <label htmlFor="image">Image URL :</label>
             </div>
             <div className="col-75">
               <input onChange={manageFormData} type="text" name="image" 
@@ -58,7 +58,7 @@ function NewFoodForm({ addNewFood }){
           </div>
           <div className="row">
             <div className="col-25">  
-              <label for="price">Price : </label>
+              <label htmlFor="price">Price : </label>
             </div>
             <div className="col-75">
               <input onChange={manageFormData} type="text" name="price" 
@@ -83,14 +83,14 @@ function NewFoodForm({ addNewFood }){
           </div>
           <div className="row">
             <div className="col-25">
-              <label for="description">Description : </label>
+              <label htmlFor="description">Description : </label>
             </div>
             <div className="col-75">
               <textarea onChange={manageFormData} type="textarea" name="description"
                 value={formData.description} placeholder="food description here..." /><br />
             </div>
           </div>
-          <div class="row">
+          <div className="row">
             <button type='submit' className="new-food-button">Add New Food</button>
           </div>
         </form>

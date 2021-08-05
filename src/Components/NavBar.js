@@ -10,25 +10,25 @@ function NavBar(){
             <NavLink 
                 exact to="/" 
                 style={{ textDecoration: 'none' }}
-                exact activeClassName="underline">
+                activeClassName="underline">
                 <li>Home Page</li>
             </NavLink>
             <NavLink 
                 to="/foods"
                 style={{ textDecoration: 'none' }}
-                exact activeClassName="underline">
+                activeClassName="underline">
                 <li>All Foods</li>
             </NavLink>
             <NavLink 
                 to="/cart"
                 style={{ textDecoration: 'none' }}
-                exact activeClassName="underline">
+                activeClassName="underline">
                 <li>My Cart</li>
             </NavLink>
             <NavLink 
                 to="/foods/new"
                 style={{ textDecoration: 'none' }}
-                exact activeClassName="underline">
+                activeClassName="underline">
                 <li>Add New Food</li>
             </NavLink>
         </nav>
