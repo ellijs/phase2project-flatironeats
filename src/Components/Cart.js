@@ -4,7 +4,8 @@ function Cart({ myCart, setMyCart, removeFoodFromCart, purchaseFood }){
     
     const renderCartItems = myCart.map((food) => {
         return(
-           <ItemsInCart key={food.cartId} removeFoodFromCart={removeFoodFromCart} food={food} myCart={myCart} setMyCart={setMyCart} />
+           <ItemsInCart key={food.cartId} removeFoodFromCart={removeFoodFromCart} 
+            food={food} myCart={myCart} setMyCart={setMyCart} />
         )
     })
    

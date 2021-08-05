@@ -48,8 +48,8 @@ function App() {
         "review": [ ...food.review, newReviewObj ]
       })
     }).then(r=> r.json()).then(data=>{
-       console.log(data)
-      })
+      console.log(data)
+    })
 
     const newReviewArray = [...foods].map(food => {
       if(food.id === id) {
@@ -78,13 +78,12 @@ function App() {
           return item
         } else {
           return item;
-        }}
-      ))
+        }
+      }))
     } else {
       setMyCart([...myCart, newItem])
     }
   }
-  
   // Remove food from cart
   function removeFoodFromCart(cartId){
     console.log(myCart)

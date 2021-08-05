@@ -18,7 +18,8 @@ function ReviewForm({ food, setReview, setShowReview, showReview }){
         <form onSubmit = {onAddReviewSubmit}>
             <input type="text" placeholder='Review here' 
                 onChange={onAddReview} value={formView}></input>
-            <button className="submit-review-button" type="submit" placeholder="Add New Review">Submit Review</button>
+            <button className="submit-review-button" type="submit" 
+                placeholder="Add New Review">Submit Review</button>
         </form> 
     )
 }

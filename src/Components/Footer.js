@@ -10,7 +10,7 @@ function Footer() {
                 flexFlow: "column-wrap",
                 justifyContent: "center",
                 alignItems: "center"
-                }}>
+            }}>
             <img className="bottom-logo" src={logo2} alt="logo" />
         </div>
     )

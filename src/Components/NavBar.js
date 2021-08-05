@@ -3,7 +3,6 @@ import logo2 from '../Images/Logo2.png';
 
 function NavBar(){
     return (
-
         <nav className="navigation">
             <div className="side-logo">
                 <img className = "top-logo" src={logo2} alt="logo" />
@@ -33,7 +32,6 @@ function NavBar(){
                 <li>Add New Food</li>
             </NavLink>
         </nav>
-
     )
 }
 

@@ -29,13 +29,14 @@ function FoodContainer({ foods, addFoodToCart, removeFoodFromCart, setReview }){
             return 0
         }
     })
-    .map(food => <FoodCard key={food.id} food={food} addFoodToCart={addFoodToCart} removeFoodFromCart={removeFoodFromCart} setReview = {setReview}/>)
-
+    .map(food => <FoodCard key={food.id} food={food} addFoodToCart={addFoodToCart} 
+                    removeFoodFromCart={removeFoodFromCart} setReview = {setReview}/>)
 
 
     return (
         <div className="menu content">
-            <SearchBar search={search} setSearch={setSearch} setSortCategory={setSortCategory} sortPrice={sortPrice} setSortPrice={setSortPrice}/>
+            <SearchBar search={search} setSearch={setSearch} setSortCategory=
+                {setSortCategory} sortPrice={sortPrice} setSortPrice={setSortPrice}/>
             {filteredFoods}
         </div>
     )
