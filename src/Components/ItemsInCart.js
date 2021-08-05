@@ -15,14 +15,18 @@ function ItemsInCart ({ food, myCart, setMyCart, removeFoodFromCart }) {
     }
 
     function handleDecreaseQuantity() {
-      setMyCart([...myCart].map((item) => {
-        if((item.id === food.id) && (item.quantity >=1)){
-          item.quantity -= 1;
-            return item
-        } else {
-          return item
-        }
-      }))
+        setMyCart([...myCart].map((item) => {
+            if(item.id === food.id) {
+              item.quantity -= 1;
+              return item
+            } else {
+              return item;
+            }}
+        ))
+    }
+
+    if(food.quantity === 0) {
+      setMyCart([...myCart].filter(item => item.id !== food.id))
     }
 
     return(
