@@ -41,7 +41,8 @@ img {
   text-decoration: none;
   list-style: none;
   font-weight: 500;
-  margin-left: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
@@ -421,7 +422,7 @@ label {
 }
 
 .footer-logo {
-  height: 500px;
+  height: 740px;
   position: relative;
 }
 
@@ -431,10 +432,6 @@ label {
   width: 100%;
   height: auto;
 } 
-
-.underline {
-  border-bottom-width: 2px;
-}
 
 /* Home Page Button */
 .homePageLink {
