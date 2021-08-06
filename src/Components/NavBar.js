@@ -10,28 +10,28 @@ function NavBar(){
             <NavLink 
                 exact to="/" 
                 style = {{ textDecoration: "none" }}
-                activeStyle={{ textDecoration:"underline" }}
+                activeStyle={{ textDecoration:"underline", color: "white"}}
                 >
                 <li>Home Page</li>
             </NavLink>
             <NavLink 
                 exact to="/foods"
                 style = {{ textDecoration: "none" }}
-                activeStyle={{ textDecoration: 'underline' }}
+                activeStyle={{ textDecoration: 'underline', color: "white" }}
                 >
                 <li>All Foods</li>
             </NavLink>
             <NavLink 
                 exact to="/cart"
                 style = {{ textDecoration: "none" }}
-                activeStyle={{ textDecoration: 'underline' }}
+                activeStyle={{ textDecoration: 'underline', color: "white" }}
                 >
                 <li>My Cart</li>
             </NavLink>
             <NavLink 
                 exact to="/foods/new"
                 style = {{ textDecoration: "none" }}
-                activeStyle={{ textDecoration: 'underline' }}
+                activeStyle={{ textDecoration: 'underline', color: "white" }}
                 >
                 <li>Add New Food</li>
             </NavLink>
